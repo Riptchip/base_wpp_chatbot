@@ -116,7 +116,7 @@ def normalize_string(string):
     normalized = u"".join([c for c in nfkd if not unicodedata.combining(c)])
 
     # Usa expressão regular para retornar a string apenas com números, letras e espaço
-    return re.sub('[^a-zA-Z0-9 \\\]', '', normalized)
+    return re.sub('[^a-zA-Z0-9\s]', '', normalized)
 
 def send_email(subject, msg, err, email_receiver):
     email = EmailMessage()
