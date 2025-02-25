@@ -1,0 +1,6 @@
+.venv
+*pycache*
+conversations
+clients
+.env
+*log*
